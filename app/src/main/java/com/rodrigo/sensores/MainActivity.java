@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.audio);
 
             if (sensorEvent.values[0] > 0) {
+                mediaPlayer.stop();
                 sensorStatus.setText("O objeto está longe");
             } else {
                 mediaPlayer.start();
